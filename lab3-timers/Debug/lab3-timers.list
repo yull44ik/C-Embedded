@@ -43,11 +43,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  19 .debug_line   0000a115  00000000  00000000  0004a11f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_str    000c46df  00000000  00000000  00054234  2**0
+ 20 .debug_str    000c46ff  00000000  00000000  00054234  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_frame  000026b0  00000000  00000000  00118914  2**2
+ 21 .debug_frame  000026b0  00000000  00000000  00118934  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line_str 00000047  00000000  00000000  0011afc4  2**0
+ 22 .debug_line_str 00000067  00000000  00000000  0011afe4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -404,21 +404,21 @@ int main(void)
  80004f2:	4808      	ldr	r0, [pc, #32]	; (8000514 <main+0x50>)
  80004f4:	f001 f9d0 	bl	8001898 <HAL_TIM_PWM_Start>
 
-  	  TIM4->CCR1 = 38;  // green 38 %
+  	  TIM4->CCR1 = (int) 129/(100.0/38);  // green 38 %
  80004f8:	4b07      	ldr	r3, [pc, #28]	; (8000518 <main+0x54>)
- 80004fa:	2226      	movs	r2, #38	; 0x26
+ 80004fa:	2231      	movs	r2, #49	; 0x31
  80004fc:	635a      	str	r2, [r3, #52]	; 0x34
-  	  TIM4->CCR2 = 46;  // orange 46 %
+  	  TIM4->CCR2 = (int) 129/(100.0/46);  // orange 46 %
  80004fe:	4b06      	ldr	r3, [pc, #24]	; (8000518 <main+0x54>)
- 8000500:	222e      	movs	r2, #46	; 0x2e
+ 8000500:	223b      	movs	r2, #59	; 0x3b
  8000502:	639a      	str	r2, [r3, #56]	; 0x38
-  	  TIM4->CCR3 = 54;  // red 54 %
+  	  TIM4->CCR3 = (int) 129/(100.0/54);  // red 54 %
  8000504:	4b04      	ldr	r3, [pc, #16]	; (8000518 <main+0x54>)
- 8000506:	2236      	movs	r2, #54	; 0x36
+ 8000506:	2245      	movs	r2, #69	; 0x45
  8000508:	63da      	str	r2, [r3, #60]	; 0x3c
-  	  TIM4->CCR4 = 50;  // blue 50 %
+  	  TIM4->CCR4 = (int) 129/(100.0/50);  // blue 50 %
  800050a:	4b03      	ldr	r3, [pc, #12]	; (8000518 <main+0x54>)
- 800050c:	2232      	movs	r2, #50	; 0x32
+ 800050c:	2240      	movs	r2, #64	; 0x40
  800050e:	641a      	str	r2, [r3, #64]	; 0x40
   /* USER CODE END 2 */
 

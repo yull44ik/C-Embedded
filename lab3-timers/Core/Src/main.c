@@ -95,10 +95,10 @@ int main(void)
   	  HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
   	  HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);
 
-  	  TIM4->CCR1 = 38;  // green 38 %
-  	  TIM4->CCR2 = 46;  // orange 46 %
-  	  TIM4->CCR3 = 54;  // red 54 %
-  	  TIM4->CCR4 = 50;  // blue 50 %
+  	  TIM4->CCR1 = (int) 129/(100.0/38);  // green 38 %
+  	  TIM4->CCR2 = (int) 129/(100.0/46);  // orange 46 %
+  	  TIM4->CCR3 = (int) 129/(100.0/54);  // red 54 %
+  	  TIM4->CCR4 = (int) 129/(100.0/50);  // blue 50 %
   /* USER CODE END 2 */
 
   /* Infinite loop */
