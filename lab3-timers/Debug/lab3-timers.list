@@ -404,19 +404,19 @@ int main(void)
  80004f2:	4808      	ldr	r0, [pc, #32]	; (8000514 <main+0x50>)
  80004f4:	f001 f9d0 	bl	8001898 <HAL_TIM_PWM_Start>
 
-  	  TIM4->CCR1 = 38;  // green (38 %)
+  	  TIM4->CCR1 = 38;  // green 38 %
  80004f8:	4b07      	ldr	r3, [pc, #28]	; (8000518 <main+0x54>)
  80004fa:	2226      	movs	r2, #38	; 0x26
  80004fc:	635a      	str	r2, [r3, #52]	; 0x34
-  	  TIM4->CCR2 = 46;  // orange (46 %)
+  	  TIM4->CCR2 = 46;  // orange 46 %
  80004fe:	4b06      	ldr	r3, [pc, #24]	; (8000518 <main+0x54>)
  8000500:	222e      	movs	r2, #46	; 0x2e
  8000502:	639a      	str	r2, [r3, #56]	; 0x38
-  	  TIM4->CCR3 = 54;  // red (54 %)
+  	  TIM4->CCR3 = 54;  // red 54 %
  8000504:	4b04      	ldr	r3, [pc, #16]	; (8000518 <main+0x54>)
  8000506:	2236      	movs	r2, #54	; 0x36
  8000508:	63da      	str	r2, [r3, #60]	; 0x3c
-  	  TIM4->CCR4 = 50;  // blue (50 %)
+  	  TIM4->CCR4 = 50;  // blue 50 %
  800050a:	4b03      	ldr	r3, [pc, #12]	; (8000518 <main+0x54>)
  800050c:	2232      	movs	r2, #50	; 0x32
  800050e:	641a      	str	r2, [r3, #64]	; 0x40
